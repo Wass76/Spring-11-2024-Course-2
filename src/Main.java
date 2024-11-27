@@ -1,4 +1,5 @@
-import java.util.Arrays;
+import peace.Elephent;
+
 import java.util.Scanner;
 
 public class Main {
@@ -113,6 +114,89 @@ public class Main {
 
         // Find the largest element of int array
 
+//        int[] a = {1 , 3 ,5 ,2 ,6, 88, 23, 83, 89, 10, 22};
+//
+//        System.out.println(largestItem(a));
+
+
+
+
+
+
+//  Session 4
+
+//      1-
+        // call function in another function
+//        System.out.println("Square of the sum is: " + squareOfSum(4,2));
+
+//      2 - recursion (Fib)
+
+
+
+//        int result = fib(5);
+//        System.out.println(result);
+
+
+
+//        System.out.println(fib(5));
+
+
+//        OOP
+
+        Elephent elephent = new Elephent("5:4" , "Black" , true);
+//        System.out.println(elephent.getColor());
+//        System.out.println(elephent.isAlive());
+
+
+        System.out.println(elephent);
+
+//        System.out.println();
 
     }
+
+
+    public static int fib(int n){
+        if(n==1 ||  n == 0)
+            return n;
+
+        return fib(n-1) + fib(n-2);
+    }
+
+
+
+
+    // access modified - return Type - name - attr (param) -  {body}
+    public static int largestItem(int[] array){
+        int max = array[0];
+
+        for(int i = 1; i < array.length; i++){
+            if(array[i] > max){
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    public static int squareOfSum(int n1 , int n2){
+        int sum1 = sum(n1 , n2);
+//        System.out.println("sum in squareOfSum: " + sum1);
+        return sum1 * sum1;
+    }
+
+    public static  int sum(int n1 , int n2){
+        return n1 + n2;
+    }
+
+
+
+
+
+//    public static int square(int number) {
+//        return number * number;
+//    }
+//
+//    public static int squareOfSum(int a, int b) {
+//        int sum = a + b;
+//        return square(sum);
+//    }
 }
