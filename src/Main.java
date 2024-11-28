@@ -58,7 +58,7 @@ public class Main {
 //        System.out.println(e2);
 
         Elephent e = new Elephent("0","red",true,1);
-        e.move("0");
+        e.parentsColor();
         e.getColor();
 
 

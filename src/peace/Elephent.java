@@ -29,7 +29,7 @@ public class Elephent extends Stone{
 
 
     public String getColor() {
-        System.out.println("child" + color);
+        System.out.println("child " + color);
         return color;
     }
 
@@ -46,14 +46,16 @@ public class Elephent extends Stone{
     }
 
     public void move(String position) {
-        this.isAlive = false;
-        this.position = position + " ";
-//        position = position  + " ";
-        start();
-        System.out.println(super.color);
-
 
     }
+
+
+    public void parentsColor(){
+        System.out.println(super.color);
+    }
+
+
+
 
 
 
