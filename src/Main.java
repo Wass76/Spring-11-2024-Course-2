@@ -1,4 +1,5 @@
 import peace.Elephent;
+import peace.Stone;
 
 import java.util.Scanner;
 
@@ -32,6 +33,39 @@ public class Main {
 //    }
 
     public static void main(String[] args) {
+
+
+//        Stone stone  = new Stone("0","",true);
+//        Stone stone = new Stone();
+//        stone.setColor("Red");
+//        stone.getColor();
+//        System.out.println(stone);
+//
+//        Elephent e1 = new Elephent("0","red",true,1);
+//        e1.setColor("blue");
+//        System.out.println(e1);
+//        e1.getColor();
+//
+//        e1.move("0");
+//
+
+
+//        Elephent e2 = new Elephent();
+//        e2.setPosition("0");
+//        e2.setColor("red");
+//        e2.setAlive(true);
+//        e2.setAge(1);
+//        System.out.println(e2);
+
+        Elephent e = new Elephent("0","red",true,1);
+        e.move("0");
+        e.getColor();
+
+
+
+
+
+
 
         String s1 = "Khalil";
 //        String s2 = "Obada";
@@ -143,12 +177,12 @@ public class Main {
 
 //        OOP
 
-        Elephent elephent = new Elephent("5:4" , "Black" , true);
+//        Elephent elephent = new Elephent("5:4" , "Black" , true);
 //        System.out.println(elephent.getColor());
 //        System.out.println(elephent.isAlive());
 
 
-        System.out.println(elephent);
+//        System.out.println(elephent);
 
 //        System.out.println();
 

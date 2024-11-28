@@ -1,37 +1,67 @@
 package peace;
 
-public class Elephent {
+public class Elephent extends Stone{
 
-    private String position;
+    private int age;
     private String color;
-    private boolean isAlive;
 
 
-    public Elephent(String position, String color, boolean isAlive) {
-        this.position = position;
-        this.color = color;
-        this.isAlive = isAlive;
+
+
+    public Elephent(){
+        super("","",true);
+        age=0;
     }
 
-    public String getPosition() {
-        return position;
+//    public Elephent(String position,String color,boolean isAlive,int age){
+//        super();
+//        this.position=position;
+//        this.color=color;
+//        this.isAlive=isAlive;
+//        this.age=age;
+//    }
+    public Elephent(String position,String color,boolean isAlive,int age){
+        super(position,color,isAlive);
+//        this.color=color;
+        this.age=age;
     }
+
+
 
     public String getColor() {
+        System.out.println("child" + color);
         return color;
     }
 
-    public boolean isAlive() {
-        return isAlive;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public void move(){
+    public int getAge() {
+        return age;
     }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void move(String position) {
+        this.isAlive = false;
+        this.position = position + " ";
+//        position = position  + " ";
+        start();
+        System.out.println(super.color);
+
+
+    }
+
+
 
     @Override
     public String toString() {
         return "Elephent{" +
-                "position='" + position + '\'' +
+                "age=" + age +
+                ", position='" + position + '\'' +
                 ", color='" + color + '\'' +
                 ", isAlive=" + isAlive +
                 '}';
