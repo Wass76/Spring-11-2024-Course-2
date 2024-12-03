@@ -1,6 +1,8 @@
+import peace.Castle;
 import peace.Elephent;
 import peace.Stone;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -57,9 +59,37 @@ public class Main {
 //        e2.setAge(1);
 //        System.out.println(e2);
 
-        Elephent e = new Elephent("0","red",true,1);
-        e.parentsColor();
-        e.getColor();
+//        Elephent e = new Elephent("0","red",true,1);
+//        e.parentsColor();
+//        e.getColor();
+
+
+
+        Elephent elephent =new Elephent();
+//        elephent.move(3.3);
+//        elephent.move(3);
+//        elephent.move();
+
+
+//        Stone el = new Elephent();
+//        el.move();
+
+
+        ArrayList <Stone> stones = new ArrayList<>();
+        stones.add( new Elephent() );
+        stones.add( new Elephent() );
+        stones.add( new Castle() );
+        stones.add( new Castle() );
+
+
+        for(Stone s : stones){
+            s.move();
+            if( s instanceof Elephent)
+                System.out.println(((Elephent)s).getAge());
+        }
+
+
+
 
 
 

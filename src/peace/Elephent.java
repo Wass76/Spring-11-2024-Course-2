@@ -3,13 +3,10 @@ package peace;
 public class Elephent extends Stone{
 
     private int age;
-    private String color;
-
-
-
 
     public Elephent(){
         super("","",true);
+        System.out.println("after abstract constructor");
         age=0;
     }
 
@@ -37,6 +34,20 @@ public class Elephent extends Stone{
         this.color = color;
     }
 
+    @Override
+    public void move() {
+        System.out.println("elephant moving");
+    }
+
+    public void move(int x) {
+        System.out.println("elephant move x");
+    }
+
+    @Override
+    public void move(double x) {
+        System.out.println("elephant move double x");
+    }
+
     public int getAge() {
         return age;
     }
@@ -44,11 +55,6 @@ public class Elephent extends Stone{
     public void setAge(int age) {
         this.age = age;
     }
-
-    public void move(String position) {
-
-    }
-
 
     public void parentsColor(){
         System.out.println(super.color);

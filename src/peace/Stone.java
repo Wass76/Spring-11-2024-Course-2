@@ -1,6 +1,6 @@
 package peace;
 
-public class Stone {
+public abstract class Stone {
 
     protected String position;
     protected String color;
@@ -8,12 +8,14 @@ public class Stone {
 
 
     public Stone(String position, String color, boolean isAlive){
+        System.out.println("in father constructor");
         this.position = position;
         this.color = color;
         this.isAlive = isAlive;
     }
 
     public Stone(){
+
         this("0"," ",true);
     }
 
@@ -54,6 +56,16 @@ public class Stone {
     protected void start(){
         System.out.println("parent starting");
     }
+
+
+    public abstract void move();
+
+    protected abstract void move(int x);
+
+    protected abstract void move(double x);
+
+
+
 
     @Override
     public String toString() {
